@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class jugador : MonoBehaviour , istats
 {
+    public event Action JugadorCreado;
     public int Fuerza { get; set; }
     public int Destreza { get; set; }
     public int Vida { get; set; }
@@ -15,6 +17,8 @@ public class jugador : MonoBehaviour , istats
             Fuerza = fuerza;
             Destreza = destreza;
             Vida = vida;
+
+           
         }
         else
         {
